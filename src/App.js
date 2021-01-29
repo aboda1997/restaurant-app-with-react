@@ -1,11 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import React  ,  { Component } from  'react' ;  // add 
+import {Navbar ,  NavbarBrand} from  'reactstrap';
+//function App() {
+  class App extends Component{  // add 
+    render() { // add  
   return (
     <div className="App">
-      <header className="App-header">
+      < Navbar dark color = "primary"> 
+      <div className = "container"> 
+       < NavbarBrand href = "/"> welcome to my  page </NavbarBrand>
+      </div>
+      </Navbar>
+    </div>
+  );
+    }
+}
+
+export default App;
+/*
+<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1 className = "App-title">Welcome to React </h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -17,9 +33,4 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header>*/ 
