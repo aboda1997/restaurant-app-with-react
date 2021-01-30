@@ -1,17 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Menu  from  './component/MenuComponent'; 
 import React  ,  { Component } from  'react' ;  // add 
 import {Navbar ,  NavbarBrand} from  'reactstrap';
 //function App() {
   class App extends Component{  // add 
     render() { // add  
   return (
-    <div className="App">
+    <div >
       < Navbar dark color = "primary"> 
       <div className = "container"> 
        < NavbarBrand href = "/"> welcome to my  page </NavbarBrand>
       </div>
       </Navbar>
+      <Menu/> 
     </div>
   );
     }
