@@ -25,7 +25,7 @@ import  {DISHES } from  "../shared/dishes"  ;
        < NavbarBrand href = "/"> Ristorante con Fusion </NavbarBrand>
       </div>
       </Navbar>
-      
+
       <Menu dishes= {this.state.dishes}
        onClick = {(dishId)=> this.onDishSelect(dishId) }/> 
       <DishDetail dish ={this.state.dishes.filter((dish)=> dish.id === this.state.selectedDish)[0]}/>
