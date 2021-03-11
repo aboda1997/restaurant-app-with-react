@@ -4,9 +4,10 @@ import './App.css';
 import {BrowserRouter} from "react-router-dom" ; 
   class App extends Component{  // add 
   
-  render() { // add  
+  render() { // browserrouter use for  to navigate to client  generated view in  your app and history object 
+    // <HashRouter> for static server  
   return (
-    <BrowserRouter>
+    <BrowserRouter>   
     <div >
       
       <Main/> 
