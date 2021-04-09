@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
   Button, Modal, ModalHeader, ModalBody,
-  Form, FormGroup, Input, Label } from 'reactstrap';
+  } from 'reactstrap';
   import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -55,7 +55,7 @@ class Header extends Component {
                         </Nav>
                         <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
+                                    <Button outline  onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                                 </NavItem>
                             </Nav>
           </Collapse>

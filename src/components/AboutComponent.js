@@ -1,11 +1,17 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
+import { Loading } from './LoadingComponent';
+import {  Fade, Stagger } from 'react-animation-components';
+
 
 function RenderLeader  ({leader}) {
     return(
+
         <Media  key = {leader.id} className = "p-3">
-            <Media object  class="d-flex  " src  = {leader.image} alt = {leader.name} />
+
+            <Media object  class="d-flex  " src  = {baseUrl+ leader.image} alt = {leader.name} />
             <div class="media-body ml-5 col-sm-10">
                 <Media heading> {leader.name} </Media>
                 
@@ -23,11 +29,37 @@ function RenderLeader  ({leader}) {
 }
 function About(props) {
 
-    const leaders = props.leaders.map((leader) => {
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
+            <Fade in >
+
             <RenderLeader leader = {leader}/>
+            </Fade>
+
         );
     });
+    if (props.leaders.isLoading) {
+        return(
+            <div className="container">
+                <div className="row">            
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    else if (props.leaders.errMess) {
+        return(
+            <div className="container">
+                <div className="row"> 
+                    <div className="col-12">
+                        <h4>{props.leaders.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    } 
+
+else{
 
     return(
         <div className="container">
@@ -85,12 +117,15 @@ function About(props) {
                 </div>
                 <div className="col-12">
                     <Media list>
+                    <Stagger in>
+
                         {leaders}
+                        </Stagger>
                     </Media>
                 </div>
             </div>
         </div>
     );
 }
-
+}
 export default About;    
