@@ -61,7 +61,7 @@ class Comment extends Component {
                     <Row className="form-group">
                                 <Label htmlFor="rating" md={12}>Rating</Label>
                                 <Col md={12}>
-                                    <Control.select model=".rating" id="rating" name="rating"
+                                    <Control.Select model=".rating" id="rating" name="rating"
                                     
                                         className="form-control"
                                          >
@@ -73,13 +73,13 @@ class Comment extends Component {
                                         <option>5</option>
 
 
-                                    </Control.select>
+                                    </Control.Select>
                                 </Col>
                             </Row>
                             <Row className="form-group">
                                 <Label htmlFor="author" md={12}>Your Name</Label>
                                 <Col md={12}>
-                                    <Control.text model=".author" id="author" name="author"
+                                    <Control.Text model=".author" id="author" name="author"
                                         placeholder="Your Name"
                                         className="form-control"
                                         validators={{
@@ -101,7 +101,7 @@ class Comment extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="comment" md={12}>Comment </Label>
                                 <Col md={12}>
-                                    <Control.textarea model=".comment" id="comment" name="comment"
+                                    <Control.Textarea model=".comment" id="comment" name="comment"
                                         rows="8"
                                         className="form-control" />
                                 </Col>
